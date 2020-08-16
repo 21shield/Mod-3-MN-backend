@@ -5,3 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+User.destroy_all
+Item.destroy_all
+
+User.create([{username: "Maria"}, {username: "Netaly"}])
+
+10.times {Item.create(
+    {
+    name: Faker::Commerce.product_name,
+    price: Faker::Commerce.price,
+    image: Faker::LoremFlickr.image,
+    description: Faker::Commerce.material,
+    quantity: 10,
+    category: Faker::Commerce.department(max: 5)
+    }
+)}
+
+puts 'Done seeding'
