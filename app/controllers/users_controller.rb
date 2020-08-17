@@ -10,4 +10,13 @@ class UsersController < ApplicationController
         render json: user
     end
 
+    def login
+        user = User.find_by(username: params[:usernameFromFrontEnd])
+        if user
+            render json: user 
+        else
+            render json: {error: "No user with that name exists"}
+        end
+    end
+
 end
