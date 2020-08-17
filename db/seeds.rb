@@ -13,11 +13,15 @@ Item.destroy_all
 
 User.create([{username: "Maria"}, {username: "Netaly"}])
 
+
+
+imgArray = [Faker::LoremFlickr.image, Faker::LoremFlickr.image, Faker::LoremFlickr.image, Faker::LoremFlickr.image, Faker::LoremFlickr.image]
+
 10.times {Item.create(
     {
     name: Faker::Commerce.product_name,
     price: Faker::Commerce.price,
-    image: Faker::LoremFlickr.image,
+    image: imgArray.sample,
     description: Faker::Commerce.material,
     quantity: 10,
     category: Faker::Commerce.department(max: 5)
