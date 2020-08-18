@@ -11,7 +11,7 @@ require 'faker'
 User.destroy_all
 Item.destroy_all
 
-User.create([{username: "Maria"}, {username: "Netaly"}])
+User.create([{username: "Maria"}, {username: "Nutella"}, {username:"Fran"}, {username:"Barbs"}, {username: "Alby"}, {username: "John"}])
 
 
 
@@ -28,6 +28,6 @@ imgArray = [Faker::LoremFlickr.image, Faker::LoremFlickr.image, Faker::LoremFlic
     }
 )}
 
-Order.create({number: "1", user: User.first})
+
 
 puts 'Done seeding'

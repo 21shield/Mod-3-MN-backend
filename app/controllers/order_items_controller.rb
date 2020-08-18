@@ -5,9 +5,7 @@ class OrderItemsController < ApplicationController
         render json: order_items
     end
 
-
-
-    def create
+    def create  
         order_item = OrderItem.create(order_item_params)
         render json: order_item
     end
