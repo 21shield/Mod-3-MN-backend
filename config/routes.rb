@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get "/order_items", to: "order_items#index"
   post '/order_items', to: "order_items#create"
-  patch "/orders/:id", to: "orders#addToOrder"
+  
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
