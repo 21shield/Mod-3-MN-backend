@@ -11,7 +11,9 @@ require 'faker'
 User.destroy_all
 Item.destroy_all
 
-User.create([{username: "Maria"}, {username: "Nutella"}, {username:"Fran"}, {username:"Barbs"}, {username: "Alby"}, {username: "John"}])
+User.create([
+    {username: "Maria"}, {username: "Nutella"}, {username:"Fran"}, {username:"Barbs"}, {username: "Alby"}, {username: "John"},{username:"Karem"}, {username: "Kevin"}, {username: "James"},{username:"21shield"}, {username: "Carrot"},{username: "peawarrior"}
+    ])
 
 
 
