@@ -23,7 +23,7 @@ imgArray = [Faker::LoremFlickr.image, Faker::LoremFlickr.image, Faker::LoremFlic
     {
     name: Faker::Commerce.product_name,
     price: Faker::Commerce.price,
-    image: imgArray.sample,
+    image: Faker::LoremFlickr.image,
     description: Faker::Commerce.material,
     quantity: 10,
     category: Faker::Commerce.department(max: 5)
