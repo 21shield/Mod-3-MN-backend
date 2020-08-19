@@ -19,7 +19,7 @@ User.create([
 
 imgArray = [Faker::LoremFlickr.image, Faker::LoremFlickr.image, Faker::LoremFlickr.image, Faker::LoremFlickr.image, Faker::LoremFlickr.image]
 
-10.times {Item.create(
+50.times {Item.create(
     {
     name: Faker::Commerce.product_name,
     price: Faker::Commerce.price,
