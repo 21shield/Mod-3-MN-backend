@@ -15,10 +15,11 @@ class OrdersController < ApplicationController
         render json: order
     end
 
-    # def addToOrder
-    #     byebug
-    #     order = Order.find(params[:id])
-    # end
+    def destroy
+       order = Order.find(params[:id])
+       order.destroy
+       render json: order
+    end
 
     def orderParams
         params.permit(:number, :user_id)
