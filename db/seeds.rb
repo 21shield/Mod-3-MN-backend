@@ -17,16 +17,16 @@ User.create([
 
 
 
-imgArray = [Faker::LoremFlickr.image, Faker::LoremFlickr.image, Faker::LoremFlickr.image, Faker::LoremFlickr.image, Faker::LoremFlickr.image]
+imgArray = ["https://static.zara.net/photos///2020/I/0/1/p/7969/236/064/2/w/1730/7969236064_1_1_1.jpg?ts=1597406729010", "https://static.zara.net/photos///2020/I/0/1/p/1856/208/800/2/w/696/1856208800_1_1_1.jpg?ts=1597396103817", "https://static.zara.net/photos///2020/I/1/1/p/6103/610/032/2/w/1164/6103610032_1_1_1.jpg?ts=1597832474937", "https://static.zara.net/photos///2020/I/1/1/p/3614/610/102/2/w/1164/3614610102_1_1_1.jpg?ts=1597738220736" , "https://static.zara.net/photos///2020/I/0/1/p/5802/109/800/2/w/1164/5802109800_6_1_1.jpg?ts=1597752942125"]
 
-50.times {Item.create(
+20.times {Item.create(
     {
     name: Faker::Commerce.product_name,
     price: Faker::Commerce.price,
-    image: Faker::LoremFlickr.image,
+    image: imgArray.sample,
     description: Faker::Commerce.material,
     quantity: 10,
-    category: Faker::Commerce.department(max: 5)
+    category: Faker::Commerce.department(max: 8)
     }
 )}
 
