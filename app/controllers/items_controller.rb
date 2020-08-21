@@ -5,4 +5,9 @@ class ItemsController < ApplicationController
         render json: items
     end
 
+    def show
+        item = Item.find(params[:id])
+        render json: item
+    end
+
 end
