@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
     
     def login
+        
         user = User.find_by(username: params[:usernameFromFrontEnd])
         if user
             render json: user 
