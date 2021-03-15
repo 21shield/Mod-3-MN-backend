@@ -45,7 +45,7 @@ imgArray = [
 
 ]
 
-20.times {Item.create(
+30.times {Item.create(
     {
     name: Faker::Commerce.product_name,
     price: Faker::Commerce.price,
