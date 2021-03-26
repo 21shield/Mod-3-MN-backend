@@ -1,6 +1,5 @@
 class OrderItemsController < ApplicationController
 
-
     def show
         order_item = OrderItem.find(params[:id])
         render json: order_item
